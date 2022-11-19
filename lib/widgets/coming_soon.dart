@@ -1,3 +1,4 @@
+import 'package:flowrhythm_web/dimensions.dart';
 import 'package:flowrhythm_web/helpers/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -25,7 +26,7 @@ class ComingSoon extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 100),
+          SizedBox(height: getHeight(42, context)),
           Center(
             child: SizedBox(
               child: Text(

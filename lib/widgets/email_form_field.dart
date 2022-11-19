@@ -1,3 +1,4 @@
+import 'package:flowrhythm_web/helpers/colors.dart';
 import 'package:flutter/material.dart';
 
 class EmailContainer extends StatelessWidget {
@@ -6,7 +7,7 @@ class EmailContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+      padding: const EdgeInsets.fromLTRB(200, 0, 200, 0),
       child: Stack(
         children: [
           Container(
@@ -15,13 +16,35 @@ class EmailContainer extends StatelessWidget {
                   color: Colors.white,
                 ),
                 borderRadius: const BorderRadius.all(Radius.circular(20))),
-            child: TextFormField(),
+            child: TextFormField(
+              cursorColor: Colors.white,
+              style: const TextStyle(color: Colors.white),
+              decoration: const InputDecoration(
+                border: InputBorder.none,
+                focusedBorder: InputBorder.none,
+                enabledBorder: InputBorder.none,
+                errorBorder: InputBorder.none,
+                disabledBorder: InputBorder.none,
+                contentPadding:
+                    EdgeInsets.only(left: 15, bottom: 11, top: 11, right: 15),
+                hintText: "Enter your email",
+                hintStyle: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            ),
           ),
           Positioned(
-              child: ElevatedButton(
-            onPressed: () {},
-            child: const Text("Join Wait list"),
-          ))
+              right: 0,
+              child: SizedBox(
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: mainGreen,
+                  ),
+                  onPressed: () {},
+                  child: const Text("Join Wait list"),
+                ),
+              ))
         ],
       ),
     );

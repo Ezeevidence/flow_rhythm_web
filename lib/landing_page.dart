@@ -14,25 +14,27 @@ class LandingPage extends StatefulWidget {
 class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
+    ScrollController controller = ScrollController();
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
 
     double getHeight(double convertHeight) {
       final screenHeight = MediaQuery.of(context).size.height;
-      const figmaDesignHeight = 812;
+      const figmaDesignHeight = 1440;
       double newScreenHeight = figmaDesignHeight / convertHeight;
       return screenHeight / newScreenHeight;
     }
 
     double getWidth(double convertWidth) {
       final screenWidth = MediaQuery.of(context).size.width;
-      const figmaDesignWidth = 375;
+      const figmaDesignWidth = 1024;
       double newScreenWidth = figmaDesignWidth / convertWidth;
       return screenWidth / newScreenWidth;
     }
 
     return Scaffold(
       body: SingleChildScrollView(
+        controller: controller,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -52,16 +54,16 @@ class _LandingPageState extends State<LandingPage> {
                     Center(
                       child: SvgPicture.asset("logos.svg"),
                     ),
-                    const SizedBox(
-                      height: 50,
+                    SizedBox(
+                      height: getHeight(33),
                     ),
                     const CountdownTimer(),
-                    const SizedBox(
-                      height: 50,
+                    SizedBox(
+                      height: getHeight(66),
                     ),
                     const ComingSoon(),
-                    const SizedBox(
-                      height: 50,
+                    SizedBox(
+                      height: getHeight(42),
                     ),
                     const EmailContainer(),
                   ],
