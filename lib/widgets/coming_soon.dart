@@ -34,7 +34,7 @@ class ComingSoon extends StatelessWidget {
                 style: GoogleFonts.raleway(
                   letterSpacing: 1.0,
                   height: 1.0,
-                  color: Colors.white,
+                  color: textGrey,
                   fontSize: 20,
                 ),
                 textAlign: TextAlign.center,

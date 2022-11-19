@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 import 'landing_page.dart';
 
 void main() {
-  runApp(const MaterialApp(
+  runApp(MaterialApp(
+    scrollBehavior: const MaterialScrollBehavior(),
     debugShowCheckedModeBanner: false,
-    home: LandingPage(),
+    theme: ThemeData(
+      visualDensity: VisualDensity.adaptivePlatformDensity,
+    ),
+    home: const LandingPage(),
   ));
 }

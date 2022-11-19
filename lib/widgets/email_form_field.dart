@@ -1,3 +1,4 @@
+import 'package:flowrhythm_web/dimensions.dart';
 import 'package:flowrhythm_web/helpers/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -6,11 +7,12 @@ class EmailContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(200, 0, 200, 0),
-      child: Stack(
-        children: [
-          Container(
+    return Stack(
+      children: [
+        SizedBox(
+          height: getHeight(60, context),
+          width: getWidth(250, context),
+          child: Container(
             decoration: BoxDecoration(
                 border: Border.all(
                   color: Colors.white,
@@ -26,7 +28,7 @@ class EmailContainer extends StatelessWidget {
                 errorBorder: InputBorder.none,
                 disabledBorder: InputBorder.none,
                 contentPadding:
-                    EdgeInsets.only(left: 15, bottom: 11, top: 11, right: 15),
+                    EdgeInsets.only(left: 20, bottom: 5, top: 5, right: 20),
                 hintText: "Enter your email",
                 hintStyle: TextStyle(
                   color: Colors.white,
@@ -34,19 +36,20 @@ class EmailContainer extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
-              right: 0,
-              child: SizedBox(
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: mainGreen,
-                  ),
-                  onPressed: () {},
-                  child: const Text("Join Wait list"),
+        ),
+        Positioned(
+            right: 0,
+            child: SizedBox(
+              height: getHeight(60, context),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: mainGreen,
                 ),
-              ))
-        ],
-      ),
+                onPressed: () {},
+                child: const Text("Join Wait list"),
+              ),
+            ))
+      ],
     );
   }
 }
