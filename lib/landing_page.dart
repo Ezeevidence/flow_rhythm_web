@@ -1,4 +1,6 @@
+import 'package:flowrhythm_web/widgets/coming_soon.dart';
 import 'package:flowrhythm_web/widgets/countdown.dart';
+import 'package:flowrhythm_web/widgets/email_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -30,30 +32,45 @@ class _LandingPageState extends State<LandingPage> {
     }
 
     return Scaffold(
-        body: SingleChildScrollView(
-      child: Container(
-        height: height,
-        width: width,
-        // constraints: const BoxConstraints.expand(),
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage("assets/background.png"), fit: BoxFit.cover),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(0, 15, 0, 10),
-          child: Column(
-            children: [
-              Center(
-                child: SvgPicture.asset("logos.svg"),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              height: height,
+              width: width,
+              // constraints: const BoxConstraints.expand(),
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("assets/background.png"),
+                    fit: BoxFit.cover),
               ),
-              const SizedBox(
-                height: 50,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(0, 15, 0, 10),
+                child: Column(
+                  children: [
+                    Center(
+                      child: SvgPicture.asset("logos.svg"),
+                    ),
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    const CountdownTimer(),
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    const ComingSoon(),
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    const EmailContainer(),
+                  ],
+                ),
               ),
-              const CountdownTimer()
-            ],
-          ),
+            ),
+          ],
         ),
       ),
-    ));
+    );
   }
 }
