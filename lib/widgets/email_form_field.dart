@@ -2,6 +2,8 @@ import 'package:flowrhythm_web/dimensions.dart';
 import 'package:flowrhythm_web/helpers/colors.dart';
 import 'package:flutter/material.dart';
 
+TextEditingController emailController = TextEditingController();
+
 class EmailContainer extends StatelessWidget {
   const EmailContainer({Key? key}) : super(key: key);
 
@@ -10,8 +12,7 @@ class EmailContainer extends StatelessWidget {
     return Stack(
       children: [
         SizedBox(
-          height: getHeight(60, context),
-          width: getWidth(250, context),
+          height: getHeight(100, context),
           child: Container(
             decoration: BoxDecoration(
                 border: Border.all(
@@ -19,6 +20,7 @@ class EmailContainer extends StatelessWidget {
                 ),
                 borderRadius: const BorderRadius.all(Radius.circular(20))),
             child: TextFormField(
+              controller: emailController,
               cursorColor: Colors.white,
               style: const TextStyle(color: Colors.white),
               decoration: const InputDecoration(
@@ -40,7 +42,7 @@ class EmailContainer extends StatelessWidget {
         Positioned(
             right: 0,
             child: SizedBox(
-              height: getHeight(60, context),
+              height: getHeight(100, context),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: mainGreen,
