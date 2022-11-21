@@ -5,7 +5,6 @@ import 'package:flowrhythm_web/widgets/countdown.dart';
 import 'package:flowrhythm_web/widgets/email_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import 'widgets/social_buttons.dart';
 
@@ -48,16 +47,16 @@ class _LandingPageState extends State<LandingPage> {
               image: AssetImage(path("background.png")), fit: BoxFit.cover),
         ),
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(50, 15, 0, 0),
+          padding: const EdgeInsets.fromLTRB(50, 15, 0, 20),
           child: SingleChildScrollView(
-            controller: scrollController,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Center(
-                  child: SvgPicture.asset("logos.svg"),
-                ),
+                    child: Image(
+                  image: AssetImage(path("logo.png")),
+                )),
                 SizedBox(
                   height: getHeight(33),
                 ),
@@ -71,7 +70,7 @@ class _LandingPageState extends State<LandingPage> {
                 ),
                 const EmailContainer(),
                 SizedBox(
-                  height: getHeight(124),
+                  height: getHeight(100),
                 ),
                 const SocialButtons(),
                 SizedBox(
