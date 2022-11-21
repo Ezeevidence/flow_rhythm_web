@@ -14,6 +14,12 @@ double getWidth(double convertWidth, BuildContext context) {
   return screenWidth / newScreenWidth;
 }
 
+double getFont(convertFont, BuildContext context) {
+  final width = MediaQuery.of(context).size.width;
+  const figmaDesignWidth = 1440;
+  return (width / figmaDesignWidth) * convertFont;
+}
+
 extension getAppHeight on num {
   // convert height
   double appHeight(BuildContext context) {

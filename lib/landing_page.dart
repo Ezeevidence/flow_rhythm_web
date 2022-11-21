@@ -1,3 +1,4 @@
+import 'package:flowrhythm_web/helpers/image.dart';
 import 'package:flowrhythm_web/widgets/coming_soon.dart';
 import 'package:flowrhythm_web/widgets/copyrights.dart';
 import 'package:flowrhythm_web/widgets/countdown.dart';
@@ -42,12 +43,12 @@ class _LandingPageState extends State<LandingPage> {
         height: height,
         width: width,
         // constraints: const BoxConstraints.expand(),
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/background.png"), fit: BoxFit.cover),
+              image: AssetImage(path("background.png")), fit: BoxFit.cover),
         ),
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(50, 15, 0, 100),
+          padding: const EdgeInsets.fromLTRB(50, 15, 0, 0),
           child: SingleChildScrollView(
             controller: scrollController,
             child: Column(

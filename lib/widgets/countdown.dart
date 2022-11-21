@@ -17,17 +17,17 @@ class CountdownTimer extends StatelessWidget {
             endTime: DateTime.parse("2022-12-25"),
             onEnd: () {},
             timeTextStyle: GoogleFonts.poppins(
-              fontSize: 100,
+              fontSize: getFont(180, context),
               foreground: Paint()
                 ..style = PaintingStyle.stroke
                 ..strokeWidth = 3
                 ..color = Colors.grey,
               fontWeight: FontWeight.w700,
             ),
-            spacerWidth: getWidth(20, context),
+            spacerWidth: getWidth(10, context),
             enableDescriptions: true,
             descriptionTextStyle: GoogleFonts.poppins(
-              fontSize: 30,
+              fontSize: getFont(40, context),
               foreground: Paint()
                 ..style = PaintingStyle.stroke
                 ..strokeWidth = 0.5

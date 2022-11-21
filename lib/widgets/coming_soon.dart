@@ -20,7 +20,7 @@ class ComingSoon extends StatelessWidget {
                     letterSpacing: 1.0,
                     height: 1.0,
                     color: mainGreen,
-                    fontSize: 60,
+                    fontSize: getFont(50, context),
                     fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
