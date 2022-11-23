@@ -8,21 +8,26 @@ class CopyRights extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Row(
-        children: [
-          const Icon(Icons.copyright),
-          SizedBox(
-            width: getWidth(10, context),
-          ),
-          Text(
-            "Copyrights FlowRhythm | All Rights Reserved",
-            textAlign: TextAlign.center,
-            style: GoogleFonts.poppins(
-              color: textGrey,
+    return Container(
+      alignment: Alignment.center,
+      child: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const Icon(Icons.copyright),
+            SizedBox(
+              width: getWidth(10, context),
             ),
-          )
-        ],
+            Text(
+              "Copyrights FlowRhythm | All Rights Reserved",
+              textAlign: TextAlign.center,
+              style: GoogleFonts.poppins(
+                color: textGrey,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
