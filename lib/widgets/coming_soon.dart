@@ -8,41 +8,36 @@ class ComingSoon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: SizedBox(
-              child: Text(
-                "We are \n Coming Soon",
-                style: GoogleFonts.raleway(
-                    letterSpacing: 1.0,
-                    height: 1.0,
-                    color: mainGreen,
-                    fontSize: getFont(50, context),
-                    fontWeight: FontWeight.bold),
-                textAlign: TextAlign.center,
-              ),
-            ),
+    return Column(
+      children: [
+        SizedBox(
+          height: getHeight(164, context),
+          width: getWidth(570, context),
+          child: Text(
+            "We are \n Coming Soon",
+            style: GoogleFonts.raleway(
+                letterSpacing: 1.0,
+                height: 1.2,
+                color: mainGreen,
+                fontSize: 32,
+                fontWeight: FontWeight.bold),
+            textScaleFactor: getScaleFactor(context),
+            textAlign: TextAlign.center,
           ),
-          SizedBox(height: getHeight(42, context)),
-          Center(
-            child: SizedBox(
-              child: Text(
-                'Be the first to find out when we go live',
-                style: GoogleFonts.raleway(
-                  letterSpacing: 1.0,
-                  height: 1.0,
-                  color: textGrey,
-                  fontSize: 20,
-                ),
-                textAlign: TextAlign.center,
-              ),
+        ),
+        SizedBox(height: getHeight(42, context)),
+        SizedBox(
+          height: getHeight(30, context),
+          child: Text(
+            'Be the first to find out when we go live',
+            style: GoogleFonts.raleway(
+              letterSpacing: 1.0,
+              color: textGrey,
             ),
+            textAlign: TextAlign.center,
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

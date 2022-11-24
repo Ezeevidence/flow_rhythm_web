@@ -18,14 +18,12 @@ class LandingPage extends StatefulWidget {
 class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
-    ScrollController controller = ScrollController();
-    ScrollController scrollController = ScrollController();
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
 
     double getHeight(double convertHeight) {
       final screenHeight = MediaQuery.of(context).size.height;
-      const figmaDesignHeight = 1024;
+      const figmaDesignHeight = 1017;
       double newScreenHeight = figmaDesignHeight / convertHeight;
       return screenHeight / newScreenHeight;
     }
@@ -44,39 +42,96 @@ class _LandingPageState extends State<LandingPage> {
         // constraints: const BoxConstraints.expand(),
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage(path("background.png")), fit: BoxFit.cover),
+              image: AssetImage(path("png_backgrounds.png")),
+              fit: BoxFit.cover),
         ),
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(50, 15, 0, 20),
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+            child: Stack(
               children: [
-                Center(
-                    child: Image(
-                  image: AssetImage(path("logo.png")),
-                )),
-                SizedBox(
-                  height: getHeight(33),
+                Positioned(
+                    top: getHeight(120),
+                    left: getWidth(300),
+                    child: SizedBox(
+                        height: getHeight(33),
+                        width: getWidth(26),
+                        child: Image.asset(path("music_note.png")))),
+                Positioned(
+                    top: getHeight(94),
+                    right: getWidth(315),
+                    child: SizedBox(
+                        height: getHeight(33),
+                        width: getWidth(26),
+                        child: Image.asset(path("headset.png")))),
+                Positioned(
+                    bottom: getHeight(124),
+                    right: getWidth(300),
+                    child: SizedBox(
+                        height: getHeight(56),
+                        width: getWidth(56),
+                        child: Image.asset(path("circle.png")))),
+                Positioned(
+                    bottom: getHeight(154),
+                    left: getWidth(315),
+                    child: SizedBox(
+                        height: getHeight(20),
+                        width: getWidth(20),
+                        child: Image.asset(path("square.png")))),
+                Positioned(
+                    bottom: getHeight(472),
+                    left: getWidth(189),
+                    child: SizedBox(
+                        height: getHeight(40),
+                        width: getWidth(40),
+                        child: Image.asset(path("user_data.png")))),
+                Positioned(
+                    top: getHeight(94),
+                    right: getWidth(315),
+                    child: SizedBox(
+                        height: getHeight(33),
+                        width: getWidth(26),
+                        child: Image.asset("headset.png"))),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Center(
+                        child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          height: getWidth(100),
+                          width: getWidth(407),
+                          child: Image(
+                            image: AssetImage(path("logo.png")),
+                          ),
+                        ),
+                      ],
+                    )),
+                    SizedBox(
+                      height: getHeight(33),
+                    ),
+                    const CountdownTimer(),
+                    SizedBox(
+                      height: getHeight(28),
+                    ),
+                    const ComingSoon(),
+                    SizedBox(
+                      height: getHeight(36),
+                    ),
+                    const EmailContainer(),
+                    SizedBox(
+                      height: getHeight(80),
+                    ),
+                    const SocialButtons(),
+                    SizedBox(
+                      height: getHeight(20),
+                    ),
+                    const CopyRights()
+                  ],
                 ),
-                const CountdownTimer(),
-                SizedBox(
-                  height: getHeight(66),
-                ),
-                const ComingSoon(),
-                SizedBox(
-                  height: getHeight(42),
-                ),
-                const EmailContainer(),
-                SizedBox(
-                  height: getHeight(100),
-                ),
-                const SocialButtons(),
-                SizedBox(
-                  height: getHeight(40),
-                ),
-                const CopyRights()
               ],
             ),
           ),
