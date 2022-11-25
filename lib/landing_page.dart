@@ -110,16 +110,13 @@ class _LandingPageState extends State<LandingPage> {
                         ),
                       ],
                     )),
-                    SizedBox(
-                      height: getHeight(33),
-                    ),
                     const CountdownTimer(),
                     SizedBox(
-                      height: getHeight(28),
+                      height: getHeight(20),
                     ),
                     const ComingSoon(),
                     SizedBox(
-                      height: getHeight(36),
+                      height: getHeight(25),
                     ),
                     const EmailContainer(),
                     SizedBox(

@@ -43,7 +43,7 @@ class EmailContainer extends StatelessWidget {
         Positioned(
             right: 0,
             child: SizedBox(
-              height: getHeight(70, context),
+              height: getHeight(68, context),
               width: getWidth(170, context),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(

@@ -25,7 +25,7 @@ class ComingSoon extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
-        SizedBox(height: getHeight(42, context)),
+        SizedBox(height: getHeight(32, context)),
         SizedBox(
           height: getHeight(30, context),
           child: Text(
