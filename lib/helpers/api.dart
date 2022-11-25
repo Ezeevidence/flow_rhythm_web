@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:http/http.dart' as http;
 
 class Api {
-  final String url = 'http://localhost:3600/api/v1/waitlist';
+  final String url = 'https://flowrhythm.studio/api/v1/waitlist';
 
   postData(var data) async {
     var res = await http.post(Uri.parse(url),
@@ -15,7 +15,8 @@ class Api {
   Future<Map<String, String>> _setHeaders() async => {
         'Content-type': 'application/json',
         'Accept': 'application/json',
-        'Accept-Encoding': 'gzip, deflate, br'
+        'Accept-Encoding': 'gzip, deflate, br',
+        "Access-Control-Allow-Origin": "*",
       };
 
   dynamic _processResponse(dynamic response) {
