@@ -1,4 +1,3 @@
-import 'package:flowrhythm_web/dimensions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -11,7 +10,6 @@ class CountdownTimer extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width,
-      height: getHeight(300, context),
       child: Align(
         alignment: Alignment.center,
         child: CountDownText(
