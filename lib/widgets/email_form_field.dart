@@ -14,17 +14,15 @@ class EmailContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       if (constraints.maxWidth < 500) {
-        return Center(
+        return Align(
+          alignment: Alignment.center,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
                 height: getHeight(72, context),
                 width: getWidth(545, context),
-                // decoration: BoxDecoration(
-                //     border: Border.all(
-                //       color: Colors.white,
-                //     ),
-                //     borderRadius: const BorderRadius.all(Radius.circular(20))),
                 child: TextFormField(
                   controller: emailController,
                   cursorColor: Colors.white,
@@ -42,6 +40,9 @@ class EmailContainer extends StatelessWidget {
                         color: Colors.white, fontSize: getFont(20, context)),
                   ),
                 ),
+              ),
+              SizedBox(
+                height: getHeight(29, context),
               ),
               Center(
                 child: SizedBox(
@@ -119,7 +120,7 @@ class EmailContainer extends StatelessWidget {
                           RoundedRectangleBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
-                              side: BorderSide(color: Colors.white)),
+                              side: BorderSide(color: mainGreen)),
                         )),
                     onPressed: () async {
                       uploadEmail();
