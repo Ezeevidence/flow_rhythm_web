@@ -4,7 +4,8 @@ import 'dart:io';
 import 'package:http/http.dart' as http;
 
 class Api {
-  final String url = 'https://flowrhythm.studio/api/v1/waitlist';
+  final String url =
+      'https://flow-rythmn-backend.herokuapp.com/api/v1/waitlist';
 
   postData(var data) async {
     var res = await http.post(Uri.parse(url),

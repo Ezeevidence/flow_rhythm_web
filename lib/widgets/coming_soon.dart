@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flowrhythm_web/dimensions.dart';
 import 'package:flowrhythm_web/helpers/colors.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +14,7 @@ class ComingSoon extends StatelessWidget {
         SizedBox(
           height: getHeight(164, context),
           width: getWidth(570, context),
-          child: Text(
+          child: AutoSizeText(
             "We are \n Coming Soon",
             style: GoogleFonts.raleway(
                 letterSpacing: 1.0,
@@ -22,6 +23,7 @@ class ComingSoon extends StatelessWidget {
                 fontSize: 32,
                 fontWeight: FontWeight.bold),
             textScaleFactor: getScaleFactor(context),
+            maxLines: 2,
             textAlign: TextAlign.center,
           ),
         ),

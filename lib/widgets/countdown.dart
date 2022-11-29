@@ -13,7 +13,7 @@ class CountdownTimer extends StatelessWidget {
       child: Align(
         alignment: Alignment.center,
         child: CountDownText(
-          due: DateTime.parse("2023-01-15"),
+          due: DateTime.parse("2023-01-17"),
           finishedText: "Done",
           showLabel: true,
           longDateName: false,

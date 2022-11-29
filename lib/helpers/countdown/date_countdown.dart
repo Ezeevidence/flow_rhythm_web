@@ -58,23 +58,29 @@ class _CountDownTextState extends State<CountDownText> {
 
   @override
   Widget build(BuildContext context) {
-    return RichText(
-        text: TextSpan(
-      children: [
-        TextSpan(text: CountDown().daysLeft(widget.due!), style: widget.style),
-        TextSpan(text: "d", style: widget.labelStyle),
-        WidgetSpan(
-          child: SizedBox(width: getWidth(200, context)),
-        ),
-        TextSpan(text: CountDown().hoursLeft(widget.due!), style: widget.style),
-        TextSpan(text: "h", style: widget.labelStyle),
-        WidgetSpan(
-          child: SizedBox(width: getWidth(200, context)),
-        ),
-        TextSpan(text: CountDown().minsLeft(widget.due!), style: widget.style),
-        TextSpan(text: "m", style: widget.labelStyle),
-      ],
-      style: widget.style,
-    ));
+    return FittedBox(
+      fit: BoxFit.fitWidth,
+      child: RichText(
+          text: TextSpan(
+        children: [
+          TextSpan(
+              text: CountDown().daysLeft(widget.due!), style: widget.style),
+          TextSpan(text: "d", style: widget.labelStyle),
+          WidgetSpan(
+            child: SizedBox(width: getWidth(200, context)),
+          ),
+          TextSpan(
+              text: CountDown().hoursLeft(widget.due!), style: widget.style),
+          TextSpan(text: "h", style: widget.labelStyle),
+          WidgetSpan(
+            child: SizedBox(width: getWidth(200, context)),
+          ),
+          TextSpan(
+              text: CountDown().minsLeft(widget.due!), style: widget.style),
+          TextSpan(text: "m", style: widget.labelStyle),
+        ],
+        style: widget.style,
+      )),
+    );
   }
 }
