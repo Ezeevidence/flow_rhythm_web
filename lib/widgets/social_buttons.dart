@@ -31,7 +31,7 @@ class SocialButtons extends StatelessWidget {
               )),
           IconButton(
               onPressed: () async {
-                const url = "https://twitter.com/FlowRythmn";
+                const url = "https://instagram.com";
                 if (await canLaunchUrlString(url)) {
                   launchUrlString(url);
                 } else {
