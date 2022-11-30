@@ -23,12 +23,11 @@ class EmailContainer extends StatelessWidget {
               Container(
                 height: getHeight(72, context),
                 width: double.infinity,
-                margin: const EdgeInsets.symmetric(horizontal: 20),
+                margin: const EdgeInsets.symmetric(horizontal: 50),
                 child: TextFormField(
                   controller: emailController,
                   cursorColor: Colors.white,
-                  style: TextStyle(
-                      color: Colors.white, fontSize: getFont(20, context)),
+                  style: TextStyle(color: Colors.white, fontSize: 20),
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white.withOpacity(0.26),
@@ -37,8 +36,7 @@ class EmailContainer extends StatelessWidget {
                     contentPadding: const EdgeInsets.only(
                         left: 10, bottom: 5, top: 5, right: 10),
                     hintText: "Enter email address",
-                    hintStyle: TextStyle(
-                        color: Colors.white, fontSize: getFont(20, context)),
+                    hintStyle: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
               ),
@@ -48,7 +46,6 @@ class EmailContainer extends StatelessWidget {
               Center(
                 child: SizedBox(
                   height: getHeight(68, context),
-                  width: getWidth(170, context),
                   child: ElevatedButton(
                     style: ButtonStyle(
                         foregroundColor:

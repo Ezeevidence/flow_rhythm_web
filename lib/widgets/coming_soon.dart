@@ -13,7 +13,6 @@ class ComingSoon extends StatelessWidget {
       children: [
         SizedBox(
           height: getHeight(164, context),
-          width: getWidth(570, context),
           child: AutoSizeText(
             "We are \n Coming Soon",
             style: GoogleFonts.raleway(
